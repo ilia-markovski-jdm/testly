@@ -23,6 +23,7 @@ concurrency:
 #Allow repo secrets
 env:
   VITE_ENVIRONMENT: ${{ secrets.VITE_ENVIRONMENT }}
+  VITE_TEST: ${{ secrets.VITE_TEST }}
 
 jobs:
   # Single deploy job since we're just deploying

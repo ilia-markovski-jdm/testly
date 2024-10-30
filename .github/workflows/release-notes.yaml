@@ -19,8 +19,8 @@ jobs:
 
       - name: Commit release notes
         run: |
-          git config --global user.name 'ilia-markovski-jdm'
-          git config --global user.email 'i.markovski@jdm.de'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add release-notes.md
           git commit -m "Add release notes"
           git push

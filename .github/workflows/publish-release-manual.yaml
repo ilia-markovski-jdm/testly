@@ -1,20 +1,32 @@
 # .github/workflows/publish-release-manual.yml
 name: Publish release (manual)
+
 on:
   workflow_dispatch:
     inputs:
       tag:
         description: The tag to publish
         required: true
+
 jobs:
   publish:
     name: Publish release
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-    with:
-        name: Release /${{ inputs.tag }}
+
+      - name: Read release body from file
+        id: read_file
+        run: |
+          body=$(cat pr-titles.txt)
+          echo "::set-output name=body::$body"
+
+      - name: Publish Release
         uses: ghalactic/github-release-from-tag@v5
+        with:
+          tag: ${{ inputs.tag }}
+          body: ${{ steps.read_file.outputs.body }}

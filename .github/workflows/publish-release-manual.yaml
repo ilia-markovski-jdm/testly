@@ -16,6 +16,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: refs/tags/${{ inputs.tag }}
-      - name: Publish release
+      - name: Release /${{ inputs.tag }}
         uses: ghalactic/github-release-from-tag@v5

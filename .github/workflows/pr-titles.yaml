@@ -17,8 +17,8 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'ilia-markovski-jdm'
+          git config --global user.email 'i.markovski@jdm.de'
           git add pr-titles.txt
           git commit -m "Log PR title: ${{ github.event.pull_request.title }}"
           git push

@@ -15,6 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-      - name: Release /${{ inputs.tag }}
+    with:
+        name: Release /${{ inputs.tag }}
         uses: ghalactic/github-release-from-tag@v5

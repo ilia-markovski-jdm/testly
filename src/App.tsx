@@ -8,6 +8,8 @@ function App() {
       <p>Description from main</p>
       <h3>Subline</h3>
       <a href="#">Link</a>
+      <a href="#">Link 2</a>
+
     </div>
   )
 }

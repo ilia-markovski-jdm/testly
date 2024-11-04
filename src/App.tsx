@@ -6,6 +6,9 @@ function App() {
       <h2>This is {import.meta.env.VITE_TEST}</h2>
       <p>Test 4</p>
       <p>Description from main</p>
+      <div>
+        <strong>{import.meta.env.VITE_ENV}</strong>
+      </div>
     </div>
   )
 }
